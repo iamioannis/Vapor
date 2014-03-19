@@ -125,8 +125,8 @@ h1.blog-title {
   padding: 0;
 }
 h2.blog-description {
-  border-bottom: 1px solid #ecf0f1;
-  border-top: 1px solid #ecf0f1;
+  border-bottom: 1px dotted #bbbbbb;
+  border-top: 1px dotted #bbbbbb;
   margin-bottom: 3em;
   padding: .5em 1em;
   line-height: 1.2em;
