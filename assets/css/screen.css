@@ -116,6 +116,7 @@ article.preview p.readmore {
 h1.blog-title,
 h2.blog-description,h2.network-links {
   text-align: center;
+  color: #7f8c8d;
 }
 h1.blog-title {
   font-size: 48px;
