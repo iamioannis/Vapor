@@ -1,12 +1,5 @@
 {{!< default}}
 
-<header id="site-head">
-    {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-    <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-    <h2 class="blog-description">{{@blog.description}} <p></p> <a href="http://twitter.com/iamioannis">Twitter</a> &nbsp; <a href="/aboutme/">About Me</a></h2>
-    <!-- <h2 class="network-links"><a href="http://twitter.com/iamioannis">Twitter</a></h2> -->
-</header>
-
 <main class="content" role="main">
 
     {{#foreach posts}}

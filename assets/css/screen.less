@@ -1,5 +1,13 @@
+// This file is horribly organized. I'm going to revamp it in 1.5.
+
+// Imports
+
+@import url('//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300');
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
 // Variables
 
+@bodyBackgroundColor: #ffffff;
 @baseFontFamily: "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @baseFontColor: #7f8c8d;
 @headerFontFamily: "Roboto Slab", @baseFontFamily;
@@ -7,6 +15,7 @@
 @headerLinkColor: @headerFontColor;
 @secondaryFontFamily: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @preFontFamily: "Consolas", Courier, monospace;
+@tableFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @linkColor: #3498db;
 @linkColorHover: darken(@linkColor, 50%);
 @borderColor: #ecf0f1;
@@ -20,10 +29,8 @@
 
 /* === Core Styles === */
 
-@import url(//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300);
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
 body {
+    background-color: @bodyBackgroundColor;
     color: @baseFontColor;
     font-size: 15px;
     font-weight: 100;
@@ -100,7 +107,7 @@ h1 {
     padding: 0;
 }
 
-#site-head, article, nav, article.preview, a.archive-link, .article-nav {
+#site-head, article, article.preview, a.archive-link, .article-nav {
     margin: 20px auto;
     max-width: @maxPageWidth;
     width: 90%;
@@ -127,12 +134,15 @@ article.preview {
     max-width: 100px;
     margin: 50px auto 0;
     text-align: center;
-}
-
-    #blog-logo img {
-        border-radius: 50%;
-        max-width: 100px;
+    div.bloglogo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-color: @bodyBackgroundColor;
     }
+}
 
 h1.blog-title, h2.blog-description,h2.network-links {
     text-align: center
@@ -149,7 +159,7 @@ h1.blog-title {
 h2.blog-description {
     border-bottom: 1px solid @borderColor;
     border-top: 1px solid @borderColor;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     padding: .5em 1em;
     line-height: 1.2em;
 }
@@ -159,6 +169,10 @@ h2.network-links{
     margin-bottom: 3em;
     padding: .5em 1em;
     line-height: 1.2em;
+}
+
+section.footer-description {
+    margin-bottom: 1em;
 }
 
 header.article-header, header.page-header {
@@ -196,6 +210,11 @@ section.author p.attr, section.share p.info {
     line-height: 20px;
     text-transform: uppercase;
     font-family: @secondaryFontFamily;
+}
+
+section.share p.info.prompt {
+    top: -5px;
+    position: relative;
 }
 
 section.author p.attr {
@@ -246,6 +265,16 @@ blockquote {
 .tags {
     font-size: 16px;
     margin-bottom: 0.6em;
+}
+
+div.authorimage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-position: center center !important;
+  margin-right: 10px;
+  float: left;
 }
 
 h1.post-title a, h1.blog-title a {
@@ -319,47 +348,60 @@ footer.post-footer {
 nav {
     border-bottom: 1px solid @borderColor;
     border-top: 1px solid @borderColor;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     text-align: center;
-}
-
-    nav ul {
+    margin: 20px auto 2em auto;
+    max-width: @maxPageWidth;
+    ul {
         list-style: none;
         margin: 0 auto;
         padding: 0;
         width: 100%;
         overflow: hidden;
         text-align: center;
-    }
-
-    nav li {
-        display: inline-block;
-        font-family: @secondaryFontFamily;
-        font-size: 18px;
-        font-weight: 300;
-        margin: 0 2em;
-        padding: 0;
-        text-align: center;
-        text-transform: uppercase;
-        width: 4em;
-    }
-
-        nav li a {
-            display: block;
-            padding: .5em 0;
+        li {
+            display: inline-block;
+            font-family: @secondaryFontFamily;
+            font-size: 18px;
+            font-weight: 300;
+            margin: 0;
+            padding: 0 .5em;
+            text-align: center;
+            text-transform: uppercase;
+            a {
+                display: block;
+                padding: .5em 0;
+            }
         }
-
-    nav li:first-child {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: right;
     }
-
-    nav li:last-child {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: left;
+    &.menu {
+        margin-bottom: 2.5em;
+        li {
+            margin: 0 .5em;
+            padding: 0;
+            &:last-child {
+                margin: 0;
+            }
+            @media only screen and (min-width: 320px) and (max-width: 662px) {
+                display: block;
+            }
+        }
     }
+    &.pagination {
+        li {
+            &:first-child {
+                margin-left: 0;
+                margin-right: 0;
+                text-align: right;
+            }
+            &:last-child {
+                margin-left: 0;
+                margin-right: 0;
+                text-align: left;
+            }
+        }
+    }
+}
 
 a.archive-link {
     border-bottom: 1px solid @borderColor;
@@ -474,7 +516,7 @@ a.archive-link {
     font-style: normal;
 }
 
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+.icon-ghost, .icon-feed {
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -486,10 +528,6 @@ a.archive-link {
     text-decoration: none;
 }
 
-.icon-twitter, .icon-google-plus, .icon-facebook {
-    padding-left: 0.5em
-}
-
 .icon-ghost:before {
     content: "\e000"
 }
@@ -498,23 +536,42 @@ a.archive-link {
     content: "\e001"
 }
 
-.icon-twitter:before {
-    content: "\e002";
-    font-size: 1.1em;
-}
-
-.icon-google-plus:before {
-    content: "\e003"
-}
-
-.icon-facebook:before {
-    content: "\e004"
-}
-
 .icon-ghost {
     font-size: 12px;
     position: relative;
     top: -1px;
+}
+
+/* Comments */
+
+#disqus_thread {
+    color: #787878; 
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    font-family: @tableFontFamily;
+    border-collapse: collapse;
+    margin: 1em 0 3em;
+    td {
+        padding: .5em;
+    }
+    thead {
+        font-weight: 600;
+        border-bottom: 1px solid @borderColor;
+    }
+    tbody {
+        tr:nth-child(even) {
+            background-color: @borderColor;
+            border-top: 1px solid darken(@borderColor, 3%);
+            border-bottom: 1px solid darken(@borderColor, 3%);
+        }
+    }
+    tfoot {
+        border-top: 1px solid @borderColor;
+    }
 }
 
 /* === Media Queries === */
