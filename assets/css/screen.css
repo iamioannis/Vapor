@@ -184,7 +184,7 @@ section.share p.info {
 }
 section.share p.info.prompt {
   top: -5px;
-  position: relative;
+  position: margin-right;
 }
 section.author p.attr {
   margin-bottom: 2px;
