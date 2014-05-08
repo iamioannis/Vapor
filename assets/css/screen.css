@@ -205,7 +205,7 @@ blockquote {
   font-weight: 300;
   line-height: 1.2em;
   font-style: italic;
-  border-left: 4em solid rgba(0, 0, 0, 0.05);
+  border-left: 1em solid rgba(0, 0, 0, 0.05);
   margin-left: 1em;
   padding-left: 1em;
   /*text-transform: uppercase;*/
