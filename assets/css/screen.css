@@ -205,17 +205,17 @@ blockquote {
   font-weight: 300;
   line-height: 1.2em;
   font-style: italic;
-  border-left: 1em solid rgba(0, 0, 0, 0.05);
+  border-left: 0.1em solid #9a9a9a;
   margin-left: 1em;
-  padding-left: 1em;
+  padding-left: 0.5em;
   /*text-transform: uppercase;*/
 }
 blockquote p {
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 1.15em;
   font-weight: 300;
-  padding: 0.2em 10px;
-  border-left: 0.1em solid #9a9a9a;
+  padding: 0.2em 4px;
+  /*border-left: 0.1em solid #9a9a9a;*/
   line-height: 1.2em;
   font-style: italic;
   /*text-transform: uppercase;*/
