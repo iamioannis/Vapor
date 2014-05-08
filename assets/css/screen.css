@@ -133,7 +133,7 @@ h1.blog-title {
 h2.blog-description {
   border-bottom: 1px dotted #bbbbbb;
   border-top: 1px dotted #bbbbbb;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
   padding: .5em 1em;
   line-height: 1.2em;
 }
