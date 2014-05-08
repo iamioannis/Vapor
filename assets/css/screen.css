@@ -194,29 +194,35 @@ section.share p.info {
   display: inline-block;
 }
 section.author p.bio {
-  font-size: 16px;
+  /*font-size: 16px;*/
   margin-left: 82px;
   line-height: 1.4em;
 }
 blockquote {
+  color: #9a9a9a;
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  font-size: 1.3em;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.2em;
   font-style: italic;
-  /*text-transform: uppercase;*/
-  border-left: 0.5em solid rgba(0, 0, 0, 0.05);
+  border-left: 4em solid rgba(0, 0, 0, 0.05);
   margin-left: 1em;
   padding-left: 1em;
+  /*text-transform: uppercase;*/
 }
 blockquote p {
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  font-size: 1.3em;
+  font-size: 1.15em;
   font-weight: 300;
+  padding: 0.2em 10px;
+  border-left: 0.1em solid #9a9a9a;
   line-height: 1.2em;
   font-style: italic;
   /*text-transform: uppercase;*/
+
 }
+
+
 .post-meta {
   color: #95a5a6;
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
