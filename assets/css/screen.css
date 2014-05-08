@@ -194,7 +194,7 @@ section.share p.info {
   display: inline-block;
 }
 section.author p.bio {
-  /*font-size: 16px;*/
+  font-size: 16px;
   margin-left: 82px;
   line-height: 1.4em;
 }
