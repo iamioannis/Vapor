@@ -359,7 +359,7 @@ nav.menu li:last-child {
   }
 }
 nav.menu {
-  margin-bottom: 2.5em;
+  /* margin-bottom: 2.5em; */
 }
 nav.menu li {
   margin: 0 .5em;
