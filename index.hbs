@@ -6,7 +6,11 @@
 
     <article class="preview">
         <header>
-            <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+            {{#has tag="Link Posts"}}
+                <h1 class="post-title"><a href="{{canonical_url}}">{{{title}}}</a> - <a href="{{url}}">&#8734;</a></h1>
+            {{else}}
+		         <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+	        {{/has}}
             <div class="post-meta"><time class="post-date" datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">...</time>
             <br>
             {{reading_time}}
