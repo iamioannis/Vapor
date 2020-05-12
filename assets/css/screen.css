@@ -250,7 +250,7 @@ div.authorimage {
 h1.post-title {
   font-family: "Roboto Slab", "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 38px;
-  font-weight: 400;
+  font-weight: lighter;
   text-align: center;
   font-variant: small-caps;
 }
